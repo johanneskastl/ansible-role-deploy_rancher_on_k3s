@@ -1,0 +1,10 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: cert-manager
+  namespace: {{ cert_manager_namespace }}
+spec:
+  chart: cert-manager
+  version: {{ cert_manager_version }}
+  targetNamespace: {{ cert_manager_namespace }}
+  repo: '{{ cert_manager_repo_url }}'
