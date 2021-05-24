@@ -1,0 +1,14 @@
+---
+# deploy_rancher_on_k3s/tasks/main.yml
+
+#
+# namespace for cert-manager
+#
+
+- name: 'Create the namespace for cert-manager'
+  template:
+    src: 'cert-manager_namespace.yml.j2'
+    dest: "{{ k3s_manifest_directory }}/cert-manager_namespace.yml"
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
