@@ -1,0 +1,11 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: rancher
+  namespace: {{ rancher_namespace }}
+spec:
+  chart: rancher
+  targetNamespace: {{ rancher_namespace }}
+  repo: '{{ rancher_repo_url }}'
+  set:
+    hostname: {{ rancher_hostname }}
