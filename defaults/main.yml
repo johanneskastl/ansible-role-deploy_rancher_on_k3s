@@ -1,0 +1,5 @@
+---
+# deploy_rancher_on_k3s/defaults/main.yml
+
+# k3s
+k3s_manifest_directory: '/var/lib/rancher/k3s/server/manifests'
