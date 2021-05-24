@@ -24,3 +24,13 @@
     owner: 'root'
     group: 'root'
     mode: '0644'
+
+#
+# Install cert-manager
+#
+
+- name: 'Download the cert-manager CRD manifest'
+  ansible.builtin.get_url:
+    url: "https://github.com/jetstack/cert-manager/releases/download/{{ cert_manager_version }}/cert-manager.crds.yaml"
+    dest: "{{ k3s_manifest_directory }}/cert-manager.crds.yaml"
+    mode: '0644'
