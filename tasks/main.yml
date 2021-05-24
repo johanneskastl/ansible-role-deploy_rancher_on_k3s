@@ -42,3 +42,15 @@
     owner: 'root'
     group: 'root'
     mode: '0644'
+
+#
+# Install Rancher
+#
+
+- name: 'Install Rancher'
+  template:
+    src: 'rancher_helm_chart.yml.j2'
+    dest: "{{ k3s_manifest_directory }}/rancher_helm_chart.yml"
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
