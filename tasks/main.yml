@@ -34,3 +34,11 @@
     url: "https://github.com/jetstack/cert-manager/releases/download/{{ cert_manager_version }}/cert-manager.crds.yaml"
     dest: "{{ k3s_manifest_directory }}/cert-manager.crds.yaml"
     mode: '0644'
+
+- name: 'Install cert-manager'
+  template:
+    src: 'cert-manager_helm_chart.yml.j2'
+    dest: "{{ k3s_manifest_directory }}/cert-manager_helm_chart.yml"
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
