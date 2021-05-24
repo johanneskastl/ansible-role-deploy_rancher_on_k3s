@@ -12,3 +12,15 @@
     owner: 'root'
     group: 'root'
     mode: '0644'
+
+#
+# namespace for Rancher
+#
+
+- name: 'Create the namespace for Rancher'
+  template:
+    src: 'rancher_namespace.yml.j2'
+    dest: "{{ k3s_manifest_directory }}/rancher_namespace.yml"
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
