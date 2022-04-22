@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: 'deploy_rancher_on_k3s'
+  namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: 'Deploy Rancher on k3s'
   company: 'B1 Systems GmbH'
