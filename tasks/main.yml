@@ -6,7 +6,7 @@
 #
 
 - name: 'Create the namespace for cert-manager'
-  template:
+  ansible.builtin.template:
     src: 'cert-manager_namespace.yml.j2'
     dest: "{{ k3s_manifest_directory }}/cert-manager_namespace.yml"
     owner: 'root'
@@ -18,7 +18,7 @@
 #
 
 - name: 'Create the namespace for Rancher'
-  template:
+  ansible.builtin.template:
     src: 'rancher_namespace.yml.j2'
     dest: "{{ k3s_manifest_directory }}/rancher_namespace.yml"
     owner: 'root'
@@ -36,7 +36,7 @@
     mode: '0644'
 
 - name: 'Install cert-manager'
-  template:
+  ansible.builtin.template:
     src: 'cert-manager_helm_chart.yml.j2'
     dest: "{{ k3s_manifest_directory }}/cert-manager_helm_chart.yml"
     owner: 'root'
@@ -48,7 +48,7 @@
 #
 
 - name: 'Install Rancher'
-  template:
+  ansible.builtin.template:
     src: 'rancher_helm_chart.yml.j2'
     dest: "{{ k3s_manifest_directory }}/rancher_helm_chart.yml"
     owner: 'root'
