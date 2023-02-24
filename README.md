@@ -39,8 +39,7 @@ Example Playbook
     - hosts: servers
       roles:
         - role: 'johanneskastl.deploy_rancher_on_k3s'
-          vars:
-            rancher_hostname: rancher.training.b1-systems.de
+          rancher_hostname: rancher.training.b1-systems.de
 
 License
 -------
